@@ -1,5 +1,5 @@
 #ejercicio 1
-from _ast import Or
+
 def calcular_producto(n, k):
     resultado = 1
     for i in range(k + 1):
