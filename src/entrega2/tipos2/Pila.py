@@ -11,7 +11,6 @@ class Pila(AgregadoLineal[E]):
     def __init__(self):
         super().__init__()
 
-    @staticmethod
     def of() -> 'Pila[E]':
  
         return Pila()

@@ -4,6 +4,7 @@ Created on 9 nov 2024
 @author: deang
 '''
 from typing import Generic, TypeVar
+from src.entrega2.tipos.Agregado_lineal import *
 
 
 E = TypeVar('E')
@@ -12,8 +13,7 @@ class Cola(AgregadoLineal[E]):
     def __init__(self):
         super().__init__()
 
-    @staticmethod
-    def of() -> 'Cola[E]':
+    def of(self) -> 'Cola[E]':
         return Cola()
 
     def add(self, element: E):

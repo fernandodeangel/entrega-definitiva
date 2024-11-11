@@ -3,18 +3,18 @@ Created on 9 nov 2024
 
 @author: deang
 '''
-from typing import Generic, List, TypeVar, Tuple
+from typing import List, TypeVar
+from src.entrega2.tipos.Agregado_lineal import *
 
 
 E = TypeVar('E')
 P = TypeVar('P')
 
-class ColaPrioridad(AgregadoLineal[E]):
+class ColaPrioridad(Agregado_lineal[E]):
     def __init__(self):
         super().__init__()
         self._priorities: List[P] = []  
 
-    @property
     def priorities(self) -> List[P]:
         return self._priorities
 

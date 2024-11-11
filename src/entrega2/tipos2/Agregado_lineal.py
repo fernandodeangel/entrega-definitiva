@@ -5,7 +5,7 @@ Created on 9 nov 2024
 '''
 from __future__ import annotations 
 
-from abc import ABC, abstractmethod
+from abc import ABC
 from typing import Generic, List, TypeVar
 
 E = TypeVar('E')
