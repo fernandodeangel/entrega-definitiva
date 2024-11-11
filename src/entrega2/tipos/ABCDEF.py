@@ -46,7 +46,7 @@ class ListaOrdenada(AgregadoLineal[E]):
         super().__init__()
         self._order = order
 
-    def of(order: Callable[[E], R]) -> 'ListaOrdenada[E]':
+    def of(self, order: Callable[[E], R]) -> 'ListaOrdenada[E]':
         
         return ListaOrdenada(order)
 
@@ -74,7 +74,7 @@ class ListaOrdenadaSinRepeticion(AgregadoLineal[E]):
         super().__init__()
         self._order = order
 
-    def of(order: Callable[[E], R]) -> 'ListaOrdenadaSinRepeticion[E]':
+    def of(self, order: Callable[[E], R]) -> 'ListaOrdenadaSinRepeticion[E]':
         return ListaOrdenadaSinRepeticion(order)
 
     def add(self, element: E):
@@ -98,7 +98,7 @@ class Cola(AgregadoLineal[E]):
     def __init__(self):
         super().__init__()
 
-    def of() -> 'Cola[E]':
+    def of(self) -> 'Cola[E]':
         return Cola()
 
     def add(self, element: E):
@@ -154,7 +154,7 @@ class Pila(AgregadoLineal[E]):
     def __init__(self):
         super().__init__()
 
-    def of() -> 'Pila[E]':
+    def of(self) -> 'Pila[E]':
  
         return Pila()
 
