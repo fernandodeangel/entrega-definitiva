@@ -17,23 +17,18 @@ class AgregadoLineal(ABC, Generic[E]):
     def __init__(self):
         self._elements: List[E] = []
 
-    @property
     def size(self) -> int:
         return len(self._elements)
 
-    @property
     def is_empty(self) -> bool:
         return len(self._elements) == 0
 
-    @property
     def elements(self) -> List[E]:
         return self._elements
 
-    @abstractmethod
     def add(self, element: E):
         pass
 
-    @abstractmethod
     def remove(self) -> E:
         pass
     
@@ -50,8 +45,7 @@ class ListaOrdenada(AgregadoLineal[E]):
     def __init__(self, order: Callable[[E], R]):
         super().__init__()
         self._order = order
-        
-    @staticmethod
+
     def of(order: Callable[[E], R]) -> 'ListaOrdenada[E]':
         
         return ListaOrdenada(order)
@@ -80,7 +74,6 @@ class ListaOrdenadaSinRepeticion(AgregadoLineal[E]):
         super().__init__()
         self._order = order
 
-    @staticmethod
     def of(order: Callable[[E], R]) -> 'ListaOrdenadaSinRepeticion[E]':
         return ListaOrdenadaSinRepeticion(order)
 
@@ -105,7 +98,6 @@ class Cola(AgregadoLineal[E]):
     def __init__(self):
         super().__init__()
 
-    @staticmethod
     def of() -> 'Cola[E]':
         return Cola()
 
@@ -131,7 +123,6 @@ class ColaPrioridad(AgregadoLineal[E]):
         super().__init__()
         self._priorities: List[P] = []  
 
-    @property
     def priorities(self) -> List[P]:
         return self._priorities
 
@@ -163,7 +154,6 @@ class Pila(AgregadoLineal[E]):
     def __init__(self):
         super().__init__()
 
-    @staticmethod
     def of() -> 'Pila[E]':
  
         return Pila()

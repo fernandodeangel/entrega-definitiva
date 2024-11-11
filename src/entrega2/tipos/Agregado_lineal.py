@@ -14,22 +14,17 @@ class AgregadoLineal(ABC, Generic[E]):
     def __init__(self):
         self._elements: List[E] = []
 
-    @property
     def size(self) -> int:
         return len(self._elements)
 
-    @property
     def is_empty(self) -> bool:
         return len(self._elements) == 0
 
-    @property
     def elements(self) -> List[E]:
         return self._elements
 
-    @abstractmethod
     def add(self, element: E):
         pass
 
-    @abstractmethod
     def remove(self) -> E:
         pass
