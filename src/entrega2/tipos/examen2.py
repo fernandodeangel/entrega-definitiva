@@ -3,6 +3,7 @@ Created on 21 nov 2024
 
 @author: deang
 '''
+from pip._internal.commands import install
 """ejercicio 1"""
 
 class Agregado_lineal:
@@ -104,7 +105,7 @@ class Agregado_lineal_mod:
 """ejercicio 3"""
 
 import pytest
-
+pip install pytest
 def test_cola_con_limite_basico():
 
     cola = ColaConLimite.of(3)
