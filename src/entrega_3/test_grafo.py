@@ -114,13 +114,3 @@ class TestEGrafo(unittest.TestCase):
         
 if __name__ == '__main__':
     unittest.main()
-    
-def test_grafo():
-    grafo = E_grafo(TipoGrafo.DIRIGIDO)
-    
-    # Leer datos de usuarios desde un archivo
-    usuarios = {}
-    with open('usuarios.py', 'r') as f:
-        for linea in f:
-            dni, nombre, pred, vec = linea.strip().split(',')
-            usuarios[dni] = (nombre, int(pred), int(vec))
