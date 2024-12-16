@@ -105,7 +105,7 @@ class Agregado_lineal_mod:
 """ejercicio 3"""
 
 import pytest
-pip install pytest
+
 def test_cola_con_limite_basico():
 
     cola = ColaConLimite.of(3)
