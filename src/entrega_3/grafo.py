@@ -4,7 +4,7 @@ Created on 16 dic 2024
 @author: deang
 '''
 from enum import Enum
-from typing import Dict, Set, Any, Optional
+from typing import Dict, Set, Any
 
 class TipoGrafo(Enum):
     DIRIGIDO = "DIRIGIDO"
